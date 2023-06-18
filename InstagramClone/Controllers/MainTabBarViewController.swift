@@ -20,11 +20,11 @@ class MainTabBarViewController: UITabBarController {
         let vc4 = UINavigationController(rootViewController: NotificationsViewController())
         let vc5 = UINavigationController(rootViewController: ProfileViewController())
 
-        vc1.title = "Home"
-        vc2.title = "Explore"
-        vc3.title = "Camera"
-        vc4.title = "Notifications"
-        vc5.title = "Profile"
+        vc1.tabBarItem.image = UIImage(systemName: "house")
+        vc2.tabBarItem.image = UIImage(systemName: "globe")
+        vc3.tabBarItem.image = UIImage(systemName: "plus")
+        vc4.tabBarItem.image = UIImage(systemName: "bell")
+        vc5.tabBarItem.image = UIImage(systemName: "person")
 
         tabBar.tintColor = .label
 
