@@ -26,6 +26,7 @@
 		458015CD2A3F28CD0081E84A /* ListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015CC2A3F28CD0081E84A /* ListViewViewController.swift */; };
 		458015CF2A3F29190081E84A /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015CE2A3F29190081E84A /* PostEditorViewController.swift */; };
 		458015D12A3F292C0081E84A /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015D02A3F292C0081E84A /* PublishPostViewController.swift */; };
+		458015D32A3F2A050081E84A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015D22A3F2A050081E84A /* MainTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		458015CC2A3F28CD0081E84A /* ListViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewViewController.swift; sourceTree = "<group>"; };
 		458015CE2A3F29190081E84A /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		458015D02A3F292C0081E84A /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
+		458015D22A3F2A050081E84A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				458015BC2A3F27B40081E84A /* Other */,
 				458015BB2A3F27640081E84A /* Core Tabs */,
+				458015D22A3F2A050081E84A /* MainTabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				458015C52A3F28550081E84A /* EditProfileViewController.swift in Sources */,
 				458015B42A3F27080081E84A /* ExploreViewController.swift in Sources */,
 				458015D12A3F292C0081E84A /* PublishPostViewController.swift in Sources */,
+				458015D32A3F2A050081E84A /* MainTabBarViewController.swift in Sources */,
 				458015B62A3F27230081E84A /* CameraViewController.swift in Sources */,
 				458015A02A3F23B50081E84A /* HomeViewController.swift in Sources */,
 				458015C12A3F27ED0081E84A /* RegistrationViewController.swift in Sources */,
