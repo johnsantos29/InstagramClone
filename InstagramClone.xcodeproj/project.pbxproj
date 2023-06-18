@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		4580159C2A3F23B50081E84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580159B2A3F23B50081E84A /* AppDelegate.swift */; };
 		4580159E2A3F23B50081E84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580159D2A3F23B50081E84A /* SceneDelegate.swift */; };
-		458015A02A3F23B50081E84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580159F2A3F23B50081E84A /* ViewController.swift */; };
+		458015A02A3F23B50081E84A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580159F2A3F23B50081E84A /* HomeViewController.swift */; };
 		458015A52A3F23B60081E84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458015A42A3F23B60081E84A /* Assets.xcassets */; };
 		458015A82A3F23B60081E84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458015A62A3F23B60081E84A /* LaunchScreen.storyboard */; };
+		458015B42A3F27080081E84A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015B32A3F27080081E84A /* ExploreViewController.swift */; };
+		458015B62A3F27230081E84A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015B52A3F27230081E84A /* CameraViewController.swift */; };
+		458015B82A3F27390081E84A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015B72A3F27390081E84A /* NotificationsViewController.swift */; };
+		458015BA2A3F274A0081E84A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458015B92A3F274A0081E84A /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		458015982A3F23B50081E84A /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4580159B2A3F23B50081E84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4580159D2A3F23B50081E84A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4580159F2A3F23B50081E84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4580159F2A3F23B50081E84A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		458015A42A3F23B60081E84A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458015A72A3F23B60081E84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458015A92A3F23B60081E84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		458015B32A3F27080081E84A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		458015B52A3F27230081E84A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		458015B72A3F27390081E84A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		458015B92A3F274A0081E84A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		4580159A2A3F23B50081E84A /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
-				4580159B2A3F23B50081E84A /* AppDelegate.swift */,
-				4580159D2A3F23B50081E84A /* SceneDelegate.swift */,
-				4580159F2A3F23B50081E84A /* ViewController.swift */,
-				458015A42A3F23B60081E84A /* Assets.xcassets */,
-				458015A62A3F23B60081E84A /* LaunchScreen.storyboard */,
+				458015B22A3F25E80081E84A /* Resources */,
+				458015B12A3F25DC0081E84A /* Models */,
+				458015B02A3F25D80081E84A /* Views */,
+				458015AF2A3F25D40081E84A /* Controllers */,
 				458015A92A3F23B60081E84A /* Info.plist */,
 			);
 			path = InstagramClone;
+			sourceTree = "<group>";
+		};
+		458015AF2A3F25D40081E84A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				458015BB2A3F27640081E84A /* Core Tabs */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		458015B02A3F25D80081E84A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				458015A42A3F23B60081E84A /* Assets.xcassets */,
+				458015A62A3F23B60081E84A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		458015B12A3F25DC0081E84A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		458015B22A3F25E80081E84A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4580159B2A3F23B50081E84A /* AppDelegate.swift */,
+				4580159D2A3F23B50081E84A /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		458015BB2A3F27640081E84A /* Core Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				4580159F2A3F23B50081E84A /* HomeViewController.swift */,
+				458015B32A3F27080081E84A /* ExploreViewController.swift */,
+				458015B52A3F27230081E84A /* CameraViewController.swift */,
+				458015B72A3F27390081E84A /* NotificationsViewController.swift */,
+				458015B92A3F274A0081E84A /* ProfileViewController.swift */,
+			);
+			path = "Core Tabs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				458015A02A3F23B50081E84A /* ViewController.swift in Sources */,
+				458015B42A3F27080081E84A /* ExploreViewController.swift in Sources */,
+				458015B62A3F27230081E84A /* CameraViewController.swift in Sources */,
+				458015A02A3F23B50081E84A /* HomeViewController.swift in Sources */,
+				458015B82A3F27390081E84A /* NotificationsViewController.swift in Sources */,
+				458015BA2A3F274A0081E84A /* ProfileViewController.swift in Sources */,
 				4580159C2A3F23B50081E84A /* AppDelegate.swift in Sources */,
 				4580159E2A3F23B50081E84A /* SceneDelegate.swift in Sources */,
 			);
