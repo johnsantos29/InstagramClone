@@ -72,6 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		457B05F02A406C1B00A2F21C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				458015C22A3F28400081E84A /* PostViewController.swift */,
+				458015C42A3F28550081E84A /* EditProfileViewController.swift */,
+				458015C62A3F28690081E84A /* SettingsViewController.swift */,
+				458015C82A3F28A80081E84A /* SearchViewController.swift */,
+				458015CA2A3F28BE0081E84A /* SearchResultsViewController.swift */,
+				458015CC2A3F28CD0081E84A /* ListViewViewController.swift */,
+				458015CE2A3F29190081E84A /* PostEditorViewController.swift */,
+				458015D02A3F292C0081E84A /* PublishPostViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		4580158F2A3F23B50081E84A = {
 			isa = PBXGroup;
 			children = (
@@ -154,14 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				458015BD2A3F27C00081E84A /* Onboarding */,
-				458015C22A3F28400081E84A /* PostViewController.swift */,
-				458015C42A3F28550081E84A /* EditProfileViewController.swift */,
-				458015C62A3F28690081E84A /* SettingsViewController.swift */,
-				458015C82A3F28A80081E84A /* SearchViewController.swift */,
-				458015CA2A3F28BE0081E84A /* SearchResultsViewController.swift */,
-				458015CC2A3F28CD0081E84A /* ListViewViewController.swift */,
-				458015CE2A3F29190081E84A /* PostEditorViewController.swift */,
-				458015D02A3F292C0081E84A /* PublishPostViewController.swift */,
+				457B05F02A406C1B00A2F21C /* General */,
 			);
 			path = Other;
 			sourceTree = "<group>";
