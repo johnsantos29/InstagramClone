@@ -65,7 +65,14 @@ final class LoginViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // assign layout / frames for all the subviews
+        // assign frames for all the subviews
+        
+        headerView.frame = CGRect(
+            x: 0,
+            y: view.safeAreaInsets.top,
+            width: view.width,
+            height: 200
+        )
     }
     
     @objc private func didTapLoginButton() {}
