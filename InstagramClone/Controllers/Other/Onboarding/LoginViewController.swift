@@ -206,10 +206,19 @@ final class LoginViewController: UIViewController {
         }
         
         AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
-            if success {
-                // user logged in
-            } else {
-                // some error occured
+            DispatchQueue.main.async {
+                if success {
+                    // user logged in
+                    self.dismiss(animated: true)
+                } else {
+                    // some error occured
+                    let alert = UIAlertController(title: "Login Error",
+                                                  message: "We were unable to log you in.",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss",
+                                                  style: .cancel))
+                    self.present(alert, animated: true)
+                }
             }
         }
     }
