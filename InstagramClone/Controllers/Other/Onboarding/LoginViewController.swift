@@ -187,10 +187,30 @@ final class LoginViewController: UIViewController {
         usernameEmailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
-        guard let username = usernameEmailField.text, !username.isEmpty,
+        guard let usernameEmail = usernameEmailField.text, !usernameEmail.isEmpty,
               let password = passwordField.text, !password.isEmpty, password.count >= 8
         else {
             return
+        }
+        
+        // login functionality
+        var username: String?
+        var email: String?
+        
+        // TODO: email validation
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            // email
+            email = usernameEmail
+        } else {
+            username = usernameEmail
+        }
+        
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
+            if success {
+                // user logged in
+            } else {
+                // some error occured
+            }
         }
     }
     
