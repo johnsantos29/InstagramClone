@@ -78,6 +78,13 @@ final class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.addSubviews(
+            usernameField,
+            emailField,
+            passwordField,
+            registerButton,
+        )
+
         view.backgroundColor = .systemBackground
     }
 }
