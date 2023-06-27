@@ -82,7 +82,7 @@ final class RegistrationViewController: UIViewController {
             usernameField,
             emailField,
             passwordField,
-            registerButton,
+            registerButton
         )
 
         view.backgroundColor = .systemBackground
