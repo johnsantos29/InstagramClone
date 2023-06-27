@@ -78,14 +78,18 @@ final class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        registerButton.addTarget(self, action: #selector(didTapRegister), for: .touchUpInside)
-
         view.addSubviews(
             usernameField,
             emailField,
             passwordField,
             registerButton
         )
+
+        registerButton.addTarget(self, action: #selector(didTapRegister), for: .touchUpInside)
+
+        usernameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
 
         view.backgroundColor = .systemBackground
     }
@@ -99,5 +103,30 @@ final class RegistrationViewController: UIViewController {
         registerButton.frame = CGRect(x: 20, y: passwordField.bottom + 10, width: view.width - 40, height: 52)
     }
 
-    @objc private func didTapRegister() {}
+    @objc private func didTapRegister() {
+        usernameField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+
+        guard let email = emailField.text, !email.isEmpty, email.count >= 5,
+              let username = usernameField.text, !username.isEmpty, username.count >= 5,
+              let password = passwordField.text, !password.isEmpty, password.count >= 8
+        else {
+            return
+        }
+    }
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameField {
+            emailField.becomeFirstResponder()
+        } else if textField == emailField {
+            passwordField.becomeFirstResponder()
+        } else {
+            didTapRegister()
+        }
+
+        return true
+    }
 }
