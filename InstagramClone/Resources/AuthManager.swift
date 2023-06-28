@@ -58,4 +58,16 @@ public final class AuthManager {
             // username login
         }
     }
+
+    public func logOut(completion: @escaping (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+            return
+        } catch {
+            print(error.localizedDescription)
+            completion(false)
+            return
+        }
+    }
 }
