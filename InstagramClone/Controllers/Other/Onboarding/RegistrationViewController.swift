@@ -114,6 +114,16 @@ final class RegistrationViewController: UIViewController {
         else {
             return
         }
+
+        AuthManager.shared.registerNewUser(username: username, email: email, password: password) { isRegistered in
+            DispatchQueue.main.async {
+                if isRegistered {
+                    print("account registered")
+                } else {
+                    print("failed to create account")
+                }
+            }
+        }
     }
 }
 

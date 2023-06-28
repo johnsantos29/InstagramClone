@@ -38,3 +38,9 @@ extension UIView {
         return frame.origin.x + frame.size.width
     }
 }
+
+extension String {
+    public func safeDatabaseKey() -> String {
+        return self.replacingOccurrences(of: ".", with: "-").replacingOccurrences(of: "@", with: "-")
+    }
+}
