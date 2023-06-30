@@ -24,7 +24,7 @@ final class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureModels()
         view.backgroundColor = .systemBackground
         view.addSubviews(tableView)
 
@@ -49,20 +49,32 @@ final class SettingsViewController: UIViewController {
     }
 
     private func didTapLogOut() {
-        AuthManager.shared.logOut { isLoggedOut in
-            DispatchQueue.main.async {
-                if isLoggedOut {
-                    let loginVC = LoginViewController()
-                    loginVC.modalPresentationStyle = .fullScreen
-                    self.present(loginVC, animated: true) {
-                        self.navigationController?.popToRootViewController(animated: false)
-                        self.tabBarController?.selectedIndex = 0
+        let actionSheet = UIAlertController(title: "Log Out",
+                                            message: "Are you sure you want to log out?",
+                                            preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        actionSheet.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { _ in
+            AuthManager.shared.logOut { isLoggedOut in
+                DispatchQueue.main.async {
+                    if isLoggedOut {
+                        let loginVC = LoginViewController()
+                        loginVC.modalPresentationStyle = .fullScreen
+                        self.present(loginVC, animated: true) {
+                            self.navigationController?.popToRootViewController(animated: false)
+                            self.tabBarController?.selectedIndex = 0
+                        }
+                    } else {
+                        // error in logging out
+                        fatalError("Could not log out user")
                     }
-                } else {
-                    // error in logging out
                 }
             }
-        }
+        }))
+
+        actionSheet.popoverPresentationController?.sourceView = tableView
+        actionSheet.popoverPresentationController?.sourceRect = tableView.bounds
+
+        present(actionSheet, animated: true)
     }
 }
 
